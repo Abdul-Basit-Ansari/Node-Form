@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="script.js"></script>
+
+</head>
+
+<body>
+
+
+	<nav class="navbar bg-dark bg-opacity-50  ">
+		<div class="container-fluid">
+			<span class="navbar-brand mb-0 h1 text-center mx-auto">Simple Account Creation Form</span>
+		</div>
+	</nav>
+	<div id="msg"></div>
+	<div class="container my-5 w-75" id="sform">
+		<h1 class="text-center my-3">Create Acconut</h1>
+		<form onsubmit="signup();return false;" method="post">
+			
+
+			<input type="text" required id="fname" class="form-control my-3" placeholder="Enter Your First Name">
+			<input type="text" required id="lname" class="form-control my-3" placeholder="Enter Your Last Name">
+			<input type="email" required id="email" class="form-control my-3" placeholder="Enter Your Email Address">
+			<input type="password" required id="pword" class="form-control my-3" placeholder="Enter Your Password">
+			<input type="password" required id="cpword" class="form-control my-3"
+				placeholder="Enter Your Confirm Password">
+			<button type="submit" class="btn btn-success opacity-75 my-2">Create Account</button>
+			<span onclick="schanger()" id="schanger" class="btn btn-primary opacity-75">Login</span>
+
+
+
+		</form>
+	</div>
+
+	<div class="container my-5 w-75" id = "lform" style="display: none;">
+		<h1 class="text-center my-3">Login</h1>
+		<form onsubmit="login();return false;" method="post">
+			
+
+			<input type="email" required id="lemail" class="form-control my-3" placeholder="Enter Your Email Address">
+			<input type="password" required id="lpword" class="form-control my-3" placeholder="Enter Your Password">
+			<button type="submit" class="btn btn-success opacity-75 my-2">Login</button>
+			<span onclick="lchanger()" id="lchanger" class="btn btn-primary opacity-75">Signup</span>
+
+
+
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
